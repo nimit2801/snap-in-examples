@@ -25,10 +25,6 @@ export async function getPartOwnersString(partObject: any) {
         return partOwnersString;
     let mentionUser = partObject.part.owned_by[0].id;
     partOwnersString = partOwnersString + "<" + mentionUser + ">";
-    for (let i = 1; i < (partObject.part.owned_by).length; i++) {
-        let mentionUser = partObject.part.owned_by[i].id;
-        partOwnersString = partOwnersString + ", <" + mentionUser + ">";
-    }
     return partOwnersString;
 }
 
